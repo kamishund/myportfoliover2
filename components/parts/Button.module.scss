@@ -1,0 +1,29 @@
+.pbtn{
+    line-height: 60px;
+    width:220px;
+    text-align: center;
+    background-color:#0B2E63;
+    border-radius: 999px;
+    color: #fff;
+    border: solid 2px #0B2E63;
+    font-family: futura-pt, sans-serif;
+    letter-spacing: 0.075em;
+    font-weight: 500;
+    font-size: 24px;
+
+    transition: 0.5s;
+    &:hover{
+       color:#0B2E63;
+       background-color: #fff;
+    }
+    @media screen and (max-width:780px) { 
+        width:200px;
+        line-height: 45px;
+        font-size: 20px;
+     }
+     @media screen and (max-width:780px) { 
+        width:140px;
+        line-height: 45px;
+        font-size: 18px;
+     }
+}
