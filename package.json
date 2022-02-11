@@ -8,10 +8,15 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "axios": "^0.25.0",
+    "buffer": "^6.0.3",
+    "js-base64": "^3.7.2",
     "next": "12.0.10",
+    "node-fetch": "^3.2.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-slick": "^0.28.1",
+    "readable-stream": "^3.6.0",
     "slick-carousel": "^1.8.1"
   },
   "devDependencies": {

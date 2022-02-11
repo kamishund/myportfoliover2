@@ -54,25 +54,25 @@ export default function Headerbar() {
     </header>
     <div className={`${styles.drawerMenu} ${openMenu ? styles.open : undefined}`}>
         <ul>
-            <li>
+            <li onClick={() => setOpenMenu(false)}>
                 <Link href="/">
                     <a>About</a>
                 </Link>
             </li>
 
-            <li>
+            <li onClick={() => setOpenMenu(false)}>
                 <Link href="/">
                     <a>Works</a>
                 </Link>
             </li>
 
-            <li>
+            <li onClick={() => setOpenMenu(false)}>
                 <Link href="/">
                     <a>Service</a>
                 </Link>
             </li>
 
-            <li>
+            <li onClick={() => setOpenMenu(false)}>
                 <Link href="/">
                     <a>Contact</a>
                 </Link>
