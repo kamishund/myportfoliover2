@@ -55,7 +55,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const post = await getWorksData(String(params.id));
+  const post = await getWorksData(params.id);
   return {
     props: { post },
     revalidate: 3,
