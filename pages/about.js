@@ -24,7 +24,7 @@ export default function About() {
                 <Title ttl="Profile" sub="自己紹介" />
                 <div className={styles.flex}>
                     <div className={styles.imgarea}>
-                        <Image src="/img/sample.jpg" width={500} height={500}/>
+                        <img src="/img/sample.jpg"/>
                     </div>
 
                     <div className={styles.textarea}>
