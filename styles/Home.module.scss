@@ -1,0 +1,93 @@
+.work_ttl{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+
+    margin-top: 16px;
+    margin-bottom: 60px;
+    @media screen and (max-width:780px) { 
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    @media screen and (max-width:500px) { 
+        margin-bottom:10px;
+      }
+    .spd{
+        @media screen and (max-width:780px) { 
+          display: none;
+        }
+    }
+
+}
+
+.work_section{
+    margin-top: 220px;
+    @media screen and (max-width:500px) { 
+        margin-top: 140px;
+    }
+    .spa{
+        display: none;
+        @media screen and (max-width:780px) { 
+          display: block;
+        }
+
+        .pbtn{
+            display: block;
+            line-height: 60px;
+            width:220px;
+            text-align: center;
+            background-color:#0B2E63;
+            border-radius: 999px;
+            color: #fff;
+            border: solid 2px #0B2E63;
+            font-family: futura-pt, sans-serif;
+            letter-spacing: 0.075em;
+            font-weight: 500;
+            font-size: 24px;
+            transition: 0.5s;
+            margin: 0px auto;
+            @media screen and (max-width:500px) { 
+                margin: 0px auto;
+             }
+            &:hover{
+               color:#0B2E63;
+               background-color: #fff;
+            }
+             @media screen and (max-width:500px) { 
+                width:140px;
+                line-height: 45px;
+                font-size: 18px;
+             }
+        }
+    }
+    .flex{
+        display: flex;
+        box-sizing: border-box;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+}
+
+
+
+.voice_section{
+    margin-top: 180px;
+    @media screen and (max-width:500px) { 
+        margin-top: 100px;
+    }
+    .voice_desc{
+        font-size: 16px;
+        margin-top: 16px;
+        letter-spacing: 0.075em;
+        line-height: 1.4;
+    }
+    .voice_wrap{
+        margin-top: 32px;
+        .voice_wrap_item{
+            margin-bottom: 32px;
+            img{
+                width: 100%;
+            }
+        }
+    }
+}

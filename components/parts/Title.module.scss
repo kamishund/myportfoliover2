@@ -5,8 +5,12 @@
         margin-left:32px;
         font-size: 16px;
         font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+        @media screen and (max-width:500px) { 
+
+        }
     }
     @media screen and (max-width:500px) { 
         font-size: 40px;
+        margin-bottom: 20px;
     }
 }
