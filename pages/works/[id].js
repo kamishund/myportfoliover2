@@ -2,11 +2,11 @@ import Layout from '../../components/Layout'
 import { getAllWorksIds,getAllWorks, getWorksData } from '../../lib/works';
 
 
-export default function Home({posts}) {
-  console.log(posts)
+export default function WorksDetail({posts}) {
+  // console.log(posts)
   return (
    <Layout>
-    
+    <p>{posts.id}</p>
    </Layout>
   )
 }

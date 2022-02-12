@@ -7,6 +7,7 @@ import styles from "../styles/Home.module.scss"
 import Title from '../components/parts/Title'
 import Card from '../components/parts/Card'
 import Link from "next/link";
+import ContactButton from '../components/parts/ContactButton'
 
 export default function Home({posts}) {
   // console.log(posts)
@@ -63,6 +64,15 @@ export default function Home({posts}) {
           </div>
        </div>
      </section>
+
+
+      <section className={styles.contact_section}>
+        <h2>お気軽にお問い合わせください</h2>
+        <ContactButton>
+          Contact
+        </ContactButton>
+       </section>
+
    </Layout>
   )
 }
