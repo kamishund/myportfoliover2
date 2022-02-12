@@ -2,7 +2,6 @@ import Layout from '../components/Layout'
 import styles from "../styles/About.module.scss"
 import Title from '../components/parts/Title'
 import Link from "next/link";
-import Image from 'next/image';
 
 
 export default function About() {
