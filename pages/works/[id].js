@@ -1,19 +1,46 @@
 import Layout from '../../components/Layout'
-import { getAllWorksIds,getAllWorks, getWorksData } from '../../lib/works';
+import { getAllWorksIds, getWorksData } from '../../lib/works';
 import { useRouter } from "next/router"
-
-
-export default function WorksDetail({posts}) {
+import styles from "../../styles/WorksDetail.module.scss"
+import { useEffect } from 'react';
+import Link from "next/link";
+export default function WorksDetail({post}) {
   // console.log(posts)
   const router = useRouter()
+  useEffect(()=>{
+    var test = document.getElementById('content');
+    if(!router.isFallback){
+      test.insertAdjacentHTML('afterbegin',post.content.rendered);
+    }
+
+  },[])
 
   if (router.isFallback) {
     return <div>Loading...</div>
   }
-  
+
   return (
-   <Layout>
-    <p>{posts?.id}</p>
+   <Layout title={post?.title.rendered}>
+     <section>
+      <div className={styles.bg}>
+        <div className={styles.ttlwrap}>
+          <p>{post.date}</p>
+          <h1>{post?.title.rendered}</h1>
+        </div>
+        {/* <img className={styles.thum} src={post.acf.image.url}/> */}
+        <img className={styles.design} src={post.acf.design.url}/>
+
+        <div className={styles.bodywrap} id="content">
+
+        <Link href={post.acf.link}>
+            <a className={styles.pbtn}>View</a>
+        </Link>
+        </div>
+
+
+      </div>
+     </section>
+   
    </Layout>
   )
 }
@@ -28,9 +55,9 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const posts = await getWorksData(params.id);
+  const post = await getWorksData(params.id);
   return {
-    props: { posts },
+    props: { post },
     revalidate: 3,
   };
 }

@@ -9,8 +9,14 @@ import Card from '../components/parts/Card'
 import Link from "next/link";
 import ContactButton from '../components/parts/ContactButton'
 
+
 export default function Home({posts}) {
-  // console.log(posts)
+
+
+  if (!posts) {
+    return <div>Loading...</div>
+  }
+
   return (
    <Layout>
      <Mainvisual />
@@ -21,7 +27,7 @@ export default function Home({posts}) {
           <div className={styles.work_ttl}>
               <Title ttl="Works" sub="実績"/>
               <div className={styles.spd}>
-                <Button>
+                <Button link='/works'>
                   More
                 </Button>
               </div>
@@ -29,7 +35,7 @@ export default function Home({posts}) {
 
           <div className={styles.flex}>
               {
-                posts?.map((post)=>(
+                posts.map((post)=>(
                   <>
                   <Card 
                     key={post.id} 
@@ -43,7 +49,7 @@ export default function Home({posts}) {
           </div>
 
           <div className={styles.spa}>
-            <Link href="">
+            <Link href="/works">
                 <a className={styles.pbtn}>More</a>
             </Link>
           </div>
@@ -78,7 +84,8 @@ export default function Home({posts}) {
 }
 
 export async function getStaticProps() {
-  const posts = await getAllWorks();
+  const res = await getAllWorks();
+  const posts = res.slice(0,3);
   return {
     props: { posts },
     revalidate: 3,

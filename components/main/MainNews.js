@@ -32,7 +32,7 @@ export default function MainNews() {
                     <h2>Service<span>サービス</span></h2>
                     <div className={styles.ttl_inner}>
                         <p>ホームページ制作を中心にECサイトの構築やウェブアプリケーション開発まで行います。</p>
-                        <Button>
+                        <Button link="/service">
                             More
                         </Button>
                     </div>

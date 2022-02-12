@@ -2,7 +2,7 @@
     display: block;
      text-align: center;
      background-color:#0B2E63;
-     border-radius: 999px;
+     border-radius: 20px;
      color: #fff;
      border: solid 2px #0B2E63;
      font-family: futura-pt, sans-serif;
@@ -10,7 +10,7 @@
      font-weight: 500;
      transition: 0.5s;
 
-     line-height: 80px;
+     line-height: 160px;
      width:500px;
      font-size: 40px;
 
@@ -23,12 +23,13 @@
      }
      @media screen and (max-width:780px) { 
          width:300px;
+         line-height: 120px;
          font-size: 30px;
 
       }
       @media screen and (max-width:500px) { 
          width:200px;
-         line-height: 45px;
+         line-height: 80px;
          font-size: 18px;
       }
  }
