@@ -75,6 +75,7 @@ export default function MainNews() {
                                 </p>
                             </div>
                             
+                            
                             <img className='sliderImg' src="img/slide3.jpg" alt="" />
                         </div>
                 </Slider>                    

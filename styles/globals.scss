@@ -170,3 +170,28 @@ font-size: 40px !important;
 .slick-track{
 position: relative !important;
 }
+
+
+// sucess
+
+.success_page{
+  text-align: center;
+  
+  .wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 80vh;
+    h2{
+      line-height: 1.4;
+      font-size: 20px;
+      margin-bottom: 40px;
+    }
+    a{
+      color: rgb(47, 137, 255);
+      text-decoration: underline;
+      font-size: 20px;
+    }
+  }
+}
