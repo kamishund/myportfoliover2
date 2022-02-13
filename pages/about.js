@@ -23,7 +23,7 @@ export default function About() {
                 <Title ttl="Profile" sub="自己紹介" />
                 <div className={styles.flex}>
                     <div className={styles.imgarea}>
-                        <img src="/img/sample.jpg"/>
+                        <img src="/img/profile.jpg"/>
                     </div>
 
                     <div className={styles.textarea}>
@@ -32,17 +32,16 @@ export default function About() {
                             2021年に地元の高専を卒業。
                             同年4月東京都のウェブ系企業に入社し、大手アパレルブランドのECサイト内
                             のコーディング業務・管理運用業務を行っている。
-                            モダンフロントエンドが大好きで、React、Nextの案件にどうしてもつきたく、隙
-                            あらばアピールしている。
+                            得意領域はフロントエンドでHTML/CSS/Javascriptだけでなく、ReactやNextなどのモダンフロントエンド技術もキャッチアップしている。
                             働きつつ平日でも３時間、休日８時間の週31時間は業務に充てられるため、
                             リソースはかなりある。
                         </p>
                         <div className={styles.sns}>
-                            <Link href="">
+                            <Link href="https://github.com/kamishund">
                                 <a className={styles.ln}>github</a>
                             </Link>
 
-                            <Link href="">
+                            <Link href="https://twitter.com/shund_webcr">
                                 <a className={styles.ln}>Twitter</a>
                             </Link>
                         </div>

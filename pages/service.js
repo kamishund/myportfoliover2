@@ -13,7 +13,7 @@ export default function About() {
         <div className="wrapper">
             <Title ttl="Service" sub="サービス一覧" />
             <div className={styles.flex}>
-                <div className={styles.imgarea}><img src='img/main1.jpg' /></div>
+                <div className={styles.imgarea}><img src='img/slide1.jpg' /></div>
                 <div className={styles.textarea}>
                     <p className={styles.num}>01-</p>
                     <h2 className={styles.name}>ホームページ制作</h2>
@@ -43,7 +43,7 @@ export default function About() {
             </div>
 
             <div className={styles.flex}>
-                <div className={styles.imgarea}><img src='img/main1.jpg' /></div>
+                <div className={styles.imgarea}><img src='img/slide2.jpg' /></div>
                 <div className={styles.textarea}>
                     <p className={styles.num}>02-</p>
                     <h2 className={styles.name}>ウェブアプリ開発</h2>
@@ -63,7 +63,7 @@ export default function About() {
             </div>
 
             <div className={styles.flex}>
-                <div className={styles.imgarea}><img src='img/main1.jpg' /></div>
+                <div className={styles.imgarea}><img src='img/slide3.jpg' /></div>
                 <div className={styles.textarea}>
                     <p className={styles.num}>03-</p>
                     <h2 className={styles.name}>ECサイト構築</h2>
@@ -75,13 +75,13 @@ export default function About() {
             </div>
 
             <div className={styles.flex}>
-                <div className={styles.imgarea}><img src='img/main1.jpg' /></div>
+                <div className={styles.imgarea}><img src='img/main2.jpg' /></div>
                 <div className={styles.textarea}>
                     <p className={styles.num}>04-</p>
                     <h2 className={styles.name}>LP制作・コーディング業務などのウェブ制作業務全般対応します</h2>
                     <p className={styles.desc}>
                         スキル：HTML/CSS/Javascript/jQuery/Wordpress/React/Next<br />
-                        ウェブ制作会社にて現役で業務を行っていますので、基本的な技術や足りないリソースの補完などできます。安心してお任せください！
+                        ウェブ制作会社にて現役で業務を行っていますので、基本的なウェブ制作技術はもちろんのこと、足りないリソースの補完などできます。安心してお任せください！
                     </p>
                 </div>
             </div>

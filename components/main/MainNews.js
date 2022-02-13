@@ -45,9 +45,7 @@ export default function MainNews() {
                                 <p className='num'>01-</p>
                                 <h3>ホームページ制作</h3>
                                 <p className='desc'>
-                                    ノーコードツール「bubble」を用いたシステム開発を行います。
-                                    予約システム・タスク管理・SNSなどお客様の業務を快適に
-                                    するウェブアプリケーションを作成します。
+                                    WordpressなどのCMSやSTUDIOを用いたホームページを作成します。基本的なSEO対策はもちろんのこと、お客様の要望に合わせたプランをフレキシブルに提案します。
                                 </p>
                             </div>
                             

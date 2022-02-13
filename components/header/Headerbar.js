@@ -16,7 +16,7 @@ export default function Headerbar() {
                 <a>ShunD Tech</a>
             </Link>
         </h1>
-        <div>
+        <div className={`${styles.colc} ${openMenu ? styles.open : undefined}`}>
             <nav>
                 <ul>
                     <li>
@@ -56,25 +56,25 @@ export default function Headerbar() {
         <ul>
             <li onClick={() => setOpenMenu(false)}>
                 <Link href="/about">
-                    <a>About</a>
+                    <a>About<br /><span>私について</span></a>
                 </Link>
             </li>
 
             <li onClick={() => setOpenMenu(false)}>
                 <Link href="/works">
-                    <a>Works</a>
+                    <a>Works<br /><span>実績</span></a>
                 </Link>
             </li>
 
             <li onClick={() => setOpenMenu(false)}>
                 <Link href="/service">
-                    <a>Service</a>
+                    <a>Service<br /><span>サービス</span></a>
                 </Link>
             </li>
 
             <li onClick={() => setOpenMenu(false)}>
                 <Link href="/contact">
-                    <a>Contact</a>
+                    <a>Contact<br /><span>お問い合わせ</span></a>
                 </Link>
             </li>
         </ul>
