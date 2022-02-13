@@ -18,7 +18,7 @@ export default function Home({works}) {
   }
 
   return (
-   <Layout>
+   <Layout title='ShunD TECH'>
      <Mainvisual />
      <MainNews />
      

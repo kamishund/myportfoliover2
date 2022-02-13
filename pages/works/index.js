@@ -15,7 +15,7 @@ export default function Works({works}) {
   }
 
   return (
-   <Layout>
+   <Layout title="Works">
      
      <section className={styles.work_page}>
        <div className={styles.wrapper}>
