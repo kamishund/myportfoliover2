@@ -8,7 +8,7 @@ export default function Mainvisual() {
       <>
         <div className={styles.main}>
             <div className={styles.textarea}>
-                <p>ウェブの技術をすべての人に</p>
+                <p>東京の現役コーダーによるWEB制作</p>
                 <h1><span>No</span> Tech <span>No</span> Life</h1>
             </div>
             <div className={styles.imgarea}> 
