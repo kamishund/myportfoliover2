@@ -1,10 +1,10 @@
 export default function sendmail(req, res) {
     let nodemailer = require("nodemailer");
-  
+
     // 送信用アカウントの設定（ここではGmail）
     const transporter = nodemailer.createTransport({
       port: 465,
-      host: "smtp.gmail.com",
+      service: 'gmail',
       auth: {
         user:  process.env.NEXT_PUBLIC_MAIL_USER,
         // Googleアカウントでアプリパスワードを取得して入れる
@@ -55,10 +55,12 @@ export default function sendmail(req, res) {
   
     // 送信する
     transporter.sendMail(toHostMailData, function (err, info) {
+     
       if (err) console.log(err);
       else console.log(info);
     });
     transporter.sendMail(toGuestMailData, function (err, info) {
+     
       if (err) console.log(err);
       else console.log(info);
     });
