@@ -1,16 +1,16 @@
 import Layout from '../../components/Layout'
-import { getAllWorksIds, getWorksData } from '../../lib/works';
+import { client, getAllWorksIds, getWorksData } from '../../lib/works';
 import { useRouter } from "next/router"
 import styles from "../../styles/WorksDetail.module.scss"
 import { useEffect } from 'react';
 import Link from "next/link";
-export default function WorksDetail({post}) {
-  // console.log(posts)
+export default function WorksDetail({works}) {
+
   const router = useRouter()
   useEffect(()=>{
     var test = document.getElementById('content');
     if(!router.isFallback){
-      test.insertAdjacentHTML('afterbegin',post.content.rendered);
+      test.insertAdjacentHTML('afterbegin',works?.body);
     }
 
   },[])
@@ -20,19 +20,19 @@ export default function WorksDetail({post}) {
   }
 
   return (
-   <Layout title={post?.title.rendered}>
+   <Layout title={works?.title}>
      <section>
       <div className={styles.bg}>
         <div className={styles.ttlwrap}>
-          <p>{post.date}</p>
-          <h1>{post?.title.rendered}</h1>
+          <p>{new Date(works?.createdAt).toLocaleDateString()}</p>
+          <h1>{works?.title}</h1>
         </div>
-        {/* <img className={styles.thum} src={post.acf.image.url}/> */}
-        <img className={styles.design} src={post.acf.design.url}/>
+        {/* <img className={styles.thum} src={}/> */}
+        <img className={styles.design} src={works?.design.url}/>
 
         <div className={styles.bodywrap} id="content">
 
-        <Link href={post.acf.link}>
+        <Link href={works?.link}>
             <a className={styles.pbtn}>View</a>
         </Link>
         </div>
@@ -45,20 +45,27 @@ export default function WorksDetail({post}) {
   )
 }
 
-export async function getStaticPaths() {
-    const paths = await getAllWorksIds();
-  
-    return {
-      paths,
-      fallback: true,
-    };
-}
 
-export async function getStaticProps({ params }) {
-  const post = await getWorksData(params.id);
+export const getStaticPaths = async () => {
+  const data = await client.get({ endpoint: "works" });
+  const paths = data.contents.map((content) => {
+    return {
+      params: {
+        id: String(content.id),
+      },
+    };
+  });
+  return { paths, fallback: true };
+};
+
+export const getStaticProps = async ({ params }) => {
+  const id = params.id;
+  const data = await client.get({ endpoint: "works", contentId: id });
+
   return {
-    props: { post },
+    props: {
+      works: data,
+    },
     revalidate: 3,
   };
-}
-
+};

@@ -13,7 +13,7 @@ export default function Card({id,ttl,date,imgurl}) {
             </div>
           
            <h3>{ttl}</h3>
-           <p className={styles.date}>{date}</p>
+           <p className={styles.date}>{ new Date(date).toLocaleDateString()}</p>
         </a>
     </Link>
     </>

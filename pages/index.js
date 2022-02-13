@@ -2,18 +2,18 @@ import Layout from '../components/Layout'
 import MainNews from '../components/main/MainNews'
 import Button from '../components/parts/Button'
 import Mainvisual from '../components/visual/Mainvisual'
-import { getAllWorks } from '../lib/works'
 import styles from "../styles/Home.module.scss"
 import Title from '../components/parts/Title'
 import Card from '../components/parts/Card'
 import Link from "next/link";
 import ContactButton from '../components/parts/ContactButton'
+import { client } from '../lib/works'
 
 
-export default function Home({posts}) {
+export default function Home({works}) {
 
 
-  if (!posts) {
+  if (!works) {
     return <div>Loading...</div>
   }
 
@@ -35,14 +35,15 @@ export default function Home({posts}) {
 
           <div className={styles.flex}>
               {
-                posts.map((post)=>(
+                works.map((post)=>(
                   <>
                   <Card 
                     key={post.id} 
                     id={post.id} 
-                    ttl={post.title.rendered} 
-                    date={post.date} 
-                    imgurl={post.acf.image.url} />
+                    ttl={post.title} 
+                    date={post.createdAt} 
+                    imgurl={post.image.url} 
+                    />
                   </>
                 ))
               }
@@ -84,10 +85,12 @@ export default function Home({posts}) {
 }
 
 export async function getStaticProps() {
-  const res = await getAllWorks();
-  const posts = res.slice(0,3);
+  const data = await client.get({ endpoint: "works" });
+
   return {
-    props: { posts },
+    props: {
+      works: data.contents.slice(0,3),
+    },
     revalidate: 3,
   };
 }

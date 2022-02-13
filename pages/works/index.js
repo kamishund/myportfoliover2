@@ -1,16 +1,16 @@
 import Layout from '../../components/Layout'
 import Button from '../../components/parts/Button'
-import { getAllWorks } from '../../lib/works'
+import { client, getAllWorks } from '../../lib/works'
 import styles from "../../styles/Work.module.scss"
 import Title from '../../components/parts/Title'
 import Card from '../../components/parts/Card'
 import Link from "next/link";
 
 
-export default function Works({posts}) {
-  // console.log(posts)
+export default function Works({works}) {
+  // console.log(works)
 
-  if (!posts) {
+  if (!works) {
     return <div>Loading...</div>
   }
 
@@ -22,14 +22,16 @@ export default function Works({posts}) {
        <Title ttl="Works" sub="実績"/>
           <div className={styles.flex}>
               {
-                posts?.map((post)=>(
+                works?.map((post)=>(
                   <>
                   <Card 
                     key={post.id} 
+                    ey={post.id} 
                     id={post.id} 
-                    ttl={post.title.rendered} 
-                    date={post.date} 
-                    imgurl={post.acf.image.url} />
+                    ttl={post.title} 
+                    date={post.createdAt} 
+                    imgurl={post.image.url} 
+                     />
                   </>
                 ))
               }
@@ -43,10 +45,14 @@ export default function Works({posts}) {
   )
 }
 
+
 export async function getStaticProps() {
-  const posts = await getAllWorks();
+  const data = await client.get({ endpoint: "works" });
+
   return {
-    props: { posts },
+    props: {
+      works: data.contents,
+    },
     revalidate: 3,
   };
 }
