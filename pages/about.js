@@ -23,7 +23,7 @@ export default function About() {
                 <Title ttl="Profile" sub="自己紹介" />
                 <div className={styles.flex}>
                     <div className={styles.imgarea}>
-                        <img src="/img/profile.jpg"/>
+                        <img src="/img/profile.jpg" alt="しゅんでぃーの写真"/>
                     </div>
 
                     <div className={styles.textarea}>

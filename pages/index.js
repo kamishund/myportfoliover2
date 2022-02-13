@@ -63,10 +63,10 @@ export default function Home({works}) {
           <p className={styles.voice_desc}>クラウドワークスでの評価を掲載しています。</p>
           <div className={styles.voice_wrap}>
               <div className={styles.voice_wrap_item}>
-                <img src="img/voice.jpg" />
+                <img src="img/voice.jpg" alt="お客様の声"/>
               </div>
               <div className={styles.voice_wrap_item}>
-                <img src="img/voice2.jpg" />
+                <img src="img/voice2.jpg" alt="お客様の声"/>
               </div>
           </div>
        </div>

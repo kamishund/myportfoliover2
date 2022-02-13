@@ -49,7 +49,7 @@ export default function MainNews() {
                                 </p>
                             </div>
                             
-                            <img className='sliderImg' src="img/slide1.jpg" alt="" />
+                            <img className='sliderImg' src="img/slide1.jpg" alt="ホームページ制作" />
                         </div>
 
                         <div className="imgWrap">
@@ -63,7 +63,7 @@ export default function MainNews() {
                                 </p>
                             </div>
                             
-                            <img className='sliderImg' src="img/slide2.jpg" alt="" />
+                            <img className='sliderImg' src="img/slide2.jpg" alt="Bubbleウェブアプリ開発" />
                         </div>
 
                         <div className="imgWrap">
@@ -76,7 +76,7 @@ export default function MainNews() {
                             </div>
                             
                             
-                            <img className='sliderImg' src="img/slide3.jpg" alt="" />
+                            <img className='sliderImg' src="img/slide3.jpg" alt="ECサイト構築" />
                         </div>
                 </Slider>                    
                 {/*  */}

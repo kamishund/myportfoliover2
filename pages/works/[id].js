@@ -28,7 +28,7 @@ export default function WorksDetail({works}) {
           <h1>{works?.title}</h1>
         </div>
         {/* <img className={styles.thum} src={}/> */}
-        <img className={styles.design} src={works?.design.url}/>
+        <img className={styles.design} src={works?.design.url} alt={works?.title}/>
 
         <div className={styles.bodywrap} id="content">
 

@@ -9,7 +9,7 @@ export default function Card({id,ttl,date,imgurl}) {
      <Link href={`/works/${id}`}>
         <a className={styles.card}>
             <div className={styles.bg}>
-               <img src={imgurl}/>
+               <img src={imgurl} alt={ttl}/>
             </div>
           
            <h3>{ttl}</h3>
