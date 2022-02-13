@@ -6,17 +6,17 @@ export default function sendmail(req, res) {
       port: 465,
       host: "smtp.gmail.com",
       auth: {
-        user:  process.env.MAIL_USER,
+        user:  process.env.NEXT_PUBLIC_MAIL_USER,
         // Googleアカウントでアプリパスワードを取得して入れる
-        pass: process.env.MAIL_PASS,
+        pass: process.env.NEXT_PUBLIC_MAIL_PASS,
       },
       secure: true,
     });
   
     // 管理人に送るお問い合わせメッセージ通知メール
     const toHostMailData = {
-      from: process.env.MAIL_USER,
-      to: process.env.MAIL_USER,
+      from: process.env.NEXT_PUBLIC_MAIL_USER,
+      to: process.env.NEXT_PUBLIC_MAIL_USER,
       subject: `【お問い合わせ】${req.body.name}様より`,
       text: req.body.message + " | Sent from: " + req.body.email,
       html: `
