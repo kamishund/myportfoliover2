@@ -89,8 +89,9 @@ export async function getStaticProps() {
 
   return {
     props: {
-      works: data.contents.slice(0,3),
+      works: data.contents.filter((work)=>{ return work.home})
     },
     revalidate: 3,
   };
 }
+

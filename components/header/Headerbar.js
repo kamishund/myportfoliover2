@@ -20,25 +20,25 @@ export default function Headerbar() {
             <nav>
                 <ul>
                     <li>
-                        <Link href="/">
+                        <Link href="/about">
                             <a>About</a>
                         </Link>
                     </li>
 
                     <li>
-                        <Link href="/">
+                        <Link href="/works">
                             <a>Works</a>
                         </Link>
                     </li>
 
                     <li>
-                        <Link href="/">
+                        <Link href="/service">
                             <a>Service</a>
                         </Link>
                     </li>
 
                     <li>
-                        <Link href="/">
+                        <Link href="/contact">
                             <a>Contact</a>
                         </Link>
                     </li>
@@ -55,25 +55,25 @@ export default function Headerbar() {
     <div className={`${styles.drawerMenu} ${openMenu ? styles.open : undefined}`}>
         <ul>
             <li onClick={() => setOpenMenu(false)}>
-                <Link href="/">
+                <Link href="/about">
                     <a>About</a>
                 </Link>
             </li>
 
             <li onClick={() => setOpenMenu(false)}>
-                <Link href="/">
+                <Link href="/works">
                     <a>Works</a>
                 </Link>
             </li>
 
             <li onClick={() => setOpenMenu(false)}>
-                <Link href="/">
+                <Link href="/service">
                     <a>Service</a>
                 </Link>
             </li>
 
             <li onClick={() => setOpenMenu(false)}>
-                <Link href="/">
+                <Link href="/contact">
                     <a>Contact</a>
                 </Link>
             </li>

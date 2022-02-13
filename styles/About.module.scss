@@ -42,9 +42,25 @@
             display: flex;
             margin-top: 78px;
             align-items: center;
+            @media screen and (max-width:780px) { 
+               flex-direction: column;
+             }
+             @media screen and (max-width:500px) { 
+                margin-top: 40px;
+                margin-top: 40px;
+              }
             .imgarea{
                 flex-basis: 50%;
                 margin-right: 40px;
+                @media screen and (max-width:780px) { 
+                    flex-basis: 100%;
+                    margin: 0;
+                    margin-bottom: 40px;
+                    width: 60%;
+                  }
+                  @media screen and (max-width:500px) { 
+                    width: 100%;
+                  }
                 img{
                     width: 100%;
                 }
@@ -54,6 +70,9 @@
                 h2{
                     font-size: 32px;
                     margin-bottom: 24px;
+                    @media screen and (max-width:500px) { 
+                        font-size: 24px;
+                      }
                 }
                 .desc{
                     line-height: 1.8;
