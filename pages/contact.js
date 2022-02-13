@@ -36,7 +36,7 @@ export default function Contact() {
           setName("");
           setEmail("");
           setMessage("");
-          window.location.href = '/success';
+          // window.location.href = '/success';
         }
       });
     };
