@@ -1,0 +1,102 @@
+.bg {
+  max-width: 730px;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 100px;
+  border: 1px solid #9ca1ad;
+  background-color: #191b1c;
+  color: #9ca1ad;
+  -webkit-box-shadow: 0 10px 25px 0 rgba(60, 194, 235, 0.5);
+          box-shadow: 0 10px 25px 0 rgba(60, 194, 235, 0.5);
+}
+
+.bg .ttlwrap {
+  padding: 84px 80px 30px;
+}
+
+@media screen and (max-width: 780px) {
+  .bg .ttlwrap {
+    padding: 40px 20px;
+  }
+}
+
+.bg .ttlwrap p {
+  font-size: 20px;
+  letter-spacing: .008em;
+  margin-bottom: 16px;
+  font-weight: 800;
+  color: #393d48;
+}
+
+@media screen and (max-width: 500px) {
+  .bg .ttlwrap p {
+    font-size: 16px;
+  }
+}
+
+.bg .ttlwrap h1 {
+  font-size: 32px;
+  letter-spacing: .075em;
+  line-height: 1.4;
+}
+
+@media screen and (max-width: 500px) {
+  .bg .ttlwrap h1 {
+    font-size: 24px;
+  }
+}
+
+.bg .thum {
+  width: 100%;
+  height: 360px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.bg .design {
+  width: 100%;
+}
+
+.bg .bodywrap {
+  padding: 30px 80px 84px;
+}
+
+.bg .bodywrap span {
+  color: #9ca1ad !important;
+}
+
+@media screen and (max-width: 780px) {
+  .bg .bodywrap {
+    padding: 40px 20px 40px;
+  }
+}
+
+.bg .bodywrap p {
+  line-height: 1.8;
+  letter-spacing: 0.075em;
+  font-weight: 600;
+}
+
+.bg .bodywrap a {
+  color: #2f89ff;
+  text-decoration: underline;
+}
+
+.bg .bodywrap .pbtn {
+  padding: 0 8em;
+  line-height: 4;
+  border: 1px solid #9ca1ad;
+  display: table;
+  margin: 48px auto 0;
+  text-decoration: none;
+  color: #9ca1ad;
+}
+
+@media screen and (max-width: 500px) {
+  .bg .bodywrap .pbtn {
+    padding: 0 6em;
+    line-height: 3;
+    margin: 20px auto 0;
+  }
+}
+/*# sourceMappingURL=WorksDetail.module.css.map */

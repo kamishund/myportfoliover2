@@ -1,0 +1,164 @@
+.bg {
+  background-color: #fff;
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 70px;
+  border-radius: 30px;
+  padding: 84px 80px 80px;
+}
+
+@media screen and (max-width: 780px) {
+  .bg {
+    padding: 40px 20px;
+  }
+}
+
+.mgt {
+  margin-top: 100px;
+}
+
+.desc {
+  margin-top: 70px;
+  line-height: 1.6;
+  font-weight: 600;
+}
+
+.desc a {
+  color: #2f89ff;
+  text-decoration: underline;
+  font-size: 20px;
+}
+
+.inputGroup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 24px;
+}
+
+@media screen and (max-width: 780px) {
+  .inputGroup {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
+.inputGroup .inputField {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  height: 60px;
+  background-color: #fafafa;
+  border-radius: 10px;
+  padding: 1em;
+  border: 2px solid #fafafa;
+  -webkit-transition: border .2s;
+  transition: border .2s;
+}
+
+.inputGroup .inputField:focus {
+  outline: solid 3px #0B2E63;
+}
+
+@media screen and (max-width: 780px) {
+  .inputGroup .inputField {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+
+.inputGroup .inputArea {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  min-height: 200px;
+  background-color: #fafafa;
+  border-radius: 10px;
+  padding: 1em;
+  border: 2px solid #fafafa;
+  -webkit-transition: border .2s;
+  transition: border .2s;
+}
+
+.inputGroup .inputArea:focus {
+  outline: solid 3px #0B2E63;
+}
+
+@media screen and (max-width: 780px) {
+  .inputGroup .inputArea {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+
+.inputGroup label {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.submit {
+  display: block;
+  line-height: 60px;
+  width: 500px;
+  text-align: center;
+  background-color: #0B2E63;
+  border-radius: 999px;
+  color: #fff;
+  border: solid 2px #0B2E63;
+  font-family: futura-pt, sans-serif;
+  letter-spacing: 0.075em;
+  font-weight: 500;
+  font-size: 24px;
+  margin: 0 auto;
+  margin-top: 60px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.submit:hover {
+  color: #0B2E63;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 780px) {
+  .submit {
+    width: 200px;
+    line-height: 45px;
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .submit {
+    width: 140px;
+    line-height: 45px;
+    font-size: 18px;
+  }
+}
+
+.submit:disabled {
+  opacity: 0.4;
+}
+
+.submit:disabled:hover {
+  background-color: #0B2E63;
+  color: #fff;
+}
+/*# sourceMappingURL=Contact.module.css.map */

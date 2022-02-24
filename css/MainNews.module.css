@@ -1,0 +1,44 @@
+.grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(260px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 60px 30px;
+  margin-top: 60px;
+}
+
+.grid .item {
+  padding: 20px;
+}
+
+@media screen and (max-width: 500px) {
+  .grid .item {
+    padding: 0px;
+  }
+}
+
+.grid .item .item_img {
+  width: 55%;
+  text-align: center;
+  margin: auto;
+}
+
+.grid .item .item_img img {
+  width: 100%;
+}
+
+.grid .item .item_ttl {
+  text-align: center;
+  font-size: 24px;
+  margin-top: 24px;
+}
+
+.grid .item .item_desc {
+  margin-top: 24px;
+  line-height: 1.6;
+}
+
+.serv_sec {
+  margin-top: 100px;
+}
+/*# sourceMappingURL=MainNews.module.css.map */

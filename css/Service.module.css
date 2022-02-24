@@ -1,0 +1,45 @@
+.service_page {
+  margin-top: 100px;
+}
+
+.service_page h1 {
+  font-size: 60px;
+  font-family: futura-pt, sans-serif;
+  text-align: center;
+  font-weight: 600;
+  margin: 0 auto;
+  margin-top: 100px;
+  margin-bottom: 40px;
+  color: #0B2E63;
+  background-color: #0B2E63;
+  color: #fff;
+  line-height: 2;
+  display: table;
+  padding: 0 1em;
+  border-radius: 20px;
+  -webkit-box-shadow: 0 0 24px gray;
+          box-shadow: 0 0 24px gray;
+}
+
+@media screen and (max-width: 780px) {
+  .service_page h1 {
+    font-size: 48px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .service_page h1 {
+    font-size: 32px;
+    margin-top: 60px;
+  }
+}
+
+.service_page .wrapper {
+  overflow-x: scroll;
+}
+
+.service_page p {
+  line-height: 1.4;
+  margin-top: 20px;
+}
+/*# sourceMappingURL=Service.module.css.map */

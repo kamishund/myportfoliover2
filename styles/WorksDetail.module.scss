@@ -43,6 +43,9 @@
 
     .bodywrap{
         padding:30px 80px 84px;
+        span{
+            color:#9ca1ad !important;
+        }
         @media screen and (max-width:780px) { 
             padding:40px 20px 40px;
          }

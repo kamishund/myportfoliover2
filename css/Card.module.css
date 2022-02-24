@@ -1,0 +1,56 @@
+.card {
+  -ms-flex-preferred-size: 31%;
+      flex-basis: 31%;
+  margin-bottom: 40px;
+  border: 1px solid #9ca1ad;
+  padding: 16px;
+  -webkit-box-shadow: 0 10px 25px 0 rgba(60, 194, 235, 0.5);
+          box-shadow: 0 10px 25px 0 rgba(60, 194, 235, 0.5);
+}
+
+.card .bg {
+  padding-top: 70%;
+  position: relative;
+}
+
+.card img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media screen and (max-width: 780px) {
+  .card {
+    margin: 0px 0px 60px;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .card {
+    margin: 0px 0px 40px;
+  }
+}
+
+.card h3 {
+  font-size: 18px;
+  margin-top: 8px;
+  line-height: 1.8;
+  color: #fff;
+  margin-top: 16px;
+}
+
+.card .date {
+  font-size: 14px;
+  font-weight: 700;
+  margin-top: 8px;
+  color: #9ca1ad;
+}
+/*# sourceMappingURL=Card.module.css.map */

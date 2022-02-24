@@ -15,8 +15,9 @@ export default function About() {
      <p>スマホでご覧の方は横スクロールしてご覧ください</p>
      </div>
      
-     <div className='ovf'>
+    
      <div className="wrapper">
+     <div className='ovf'>
       <table>
       <thead>
           <tr>
