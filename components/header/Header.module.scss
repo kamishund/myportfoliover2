@@ -1,5 +1,4 @@
 .header{
-    font-family: futura-pt, sans-serif;
     height: 80px;
     display: flex;
     align-items: center;
@@ -10,20 +9,19 @@
     top: 0;
     left: 0;
     right: 0;
-    // background-color: #fff;
     box-sizing: border-box;
     h1{
         font-size: 30px;
         font-weight: 700;
-        font-family: futura-pt-bold, sans-serif;
-        color:#0B2E63;
-        // color: #181818;
+        color:#9ca1ad;
+        @media screen and (max-width:500px) { 
+          font-size: 24px;
+          }
     }
     nav{
         ul{
             display: flex;
             font-size: 20px;
-            font-family: futura-pt, sans-serif;
             font-weight: 500;
             @media screen and (max-width:780px) { 
               display: none;
@@ -31,6 +29,9 @@
             font-style: normal;
             li{
                 margin-right: 40px;
+                a{
+                  color:#9ca1ad;
+                }
             }
         }
     }
@@ -53,7 +54,7 @@
         left: 14px;
         height: 3px;
         border-radius: 2px;
-        background: rgb(0, 0, 0);
+        background:#9ca1ad;
         width: 45%; 
     }
 
@@ -75,7 +76,6 @@
     left: 18px;
     transform: translateY(6px) rotate(-45deg);
     width: 30%;
-    background-color: #fff;
 }
 
 .humburger span.open:nth-of-type(2) {
@@ -87,12 +87,11 @@
     left: 18px;
     transform: translateY(-6px) rotate(45deg);
     width: 30%;
-    background-color: #fff;
 }
 
   .drawerMenu {
-    color: white;
-    background-color:#0B2E63;
+    color:#9ca1ad;
+    background-color: #191b1c;
     position: fixed;
     transition: 0.5s;
    
@@ -119,7 +118,6 @@
         display: block;
         font-size: 30px;
         font-weight: 700;
-        font-family: futura-pt-bold, sans-serif;
         text-align: left;
 
         opacity: 0;

@@ -18,7 +18,7 @@ export default function Layout({ children, title = "HP by Nextjs" }) {
       </main>
 
       <footer className={styles.footer}>
-        <p className={styles.footer_copy}>&copy;2022 ShunD Tech. All rights reserved </p>
+        <p className={styles.footer_copy}>&copy;2022 ShunD . All rights reserved </p>
       </footer>
     </>
   );

@@ -1,87 +1,53 @@
 
 import styles from './MainNews.module.scss'
 import React from "react"
+import Title from '../parts/Title';
 
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import Button from '../parts/Button';
 export default function MainNews() {
-    const settings = {
-        dots: true,
-        infinite: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        fade: true,
-        pauseOnFocus: false,
-        pauseOnHover: false,
-        draggable: false,
-        autoplaySpeed: 6000,
-        speed: 500,
-        autoplay: true,
-        dots:true,
-        arrows: false
-      };
+
 
   return (
       <>
-      
-        <section className={styles.mgt}>
-            <div className='wrapper'>
-                <div className={styles.ttl}>
-                    <h2>Service<span>サービス</span></h2>
-                    <div className={styles.ttl_inner}>
-                        <p>ホームページ制作を中心にECサイトの構築やウェブアプリケーション開発まで行います。</p>
-                        <Button link="/service">
-                            More
-                        </Button>
+      <section className={styles.serv_sec}>
+        <div className='wrapper'>
+        <Title ttl="Sevice" sub="サービス" />
+            <div className={styles.grid}>
+                <div className={styles.item}>
+                    <div className={styles.item_img}>
+                        <img src="img/html.png" />
                     </div>
+                    <p className={styles.item_ttl}>
+                        HTML/CSS
+                    </p>
+                    <p className={styles.item_desc}>
+                    デザインカンプ通りのコーディング行います。正しく美しいマークアップと、今後の変更への強さを考慮しています。
+                    </p>
                 </div>
-
-                {/*  */}
-                <Slider {...settings}>
-                        <div className="imgWrap">
-                            <div className='img-wrap-text'>
-                                <p className='num'>01-</p>
-                                <h3>ホームページ制作</h3>
-                                <p className='desc'>
-                                    WordpressなどのCMSやSTUDIOを用いたホームページを作成します。基本的なSEO対策はもちろんのこと、お客様の要望に合わせたプランをフレキシブルに提案します。
-                                </p>
-                            </div>
-                            
-                            <img className='sliderImg' src="img/slide1.jpg" alt="ホームページ制作" />
-                        </div>
-
-                        <div className="imgWrap">
-                            <div className='img-wrap-text'>
-                                <p className='num'>02-</p>
-                                <h3>Bubbleウェブアプリ開発</h3>
-                                <p className='desc'>
-                                    ノーコードツール「bubble」を用いたシステム開発を行います。
-                                    予約システム・タスク管理・SNSなどお客様の業務を快適に
-                                    するウェブアプリケーションを作成します。
-                                </p>
-                            </div>
-                            
-                            <img className='sliderImg' src="img/slide2.jpg" alt="Bubbleウェブアプリ開発" />
-                        </div>
-
-                        <div className="imgWrap">
-                            <div className='img-wrap-text'>
-                                <p className='num'>03-</p>
-                                <h3>ECサイト構築</h3>
-                                <p className='desc'>
-                                    shopifyを用いたECサイト構築を行います。ECサイトは作成する前後もとても大切なので、実務での経験をもとにSNSなどの運用やサイト運用をサポートさせていただき、作って終わりではなく売れるECサイト制作をします。
-                                </p>
-                            </div>
-                            
-                            
-                            <img className='sliderImg' src="img/slide3.jpg" alt="ECサイト構築" />
-                        </div>
-                </Slider>                    
-                {/*  */}
+                <div className={styles.item}>
+                    <div className={styles.item_img}>
+                        <img src="img/wp.png" />
+                    </div>
+                    <p className={styles.item_ttl}>
+                       WordPress
+                    </p>
+                    <p className={styles.item_desc}>
+                     CMSシェアトップを誇るWordPressの構築ができます。お問い合わせフォーム・カスタム投稿タイプなどご要望に応じてカスタマイズ可能です。
+                    </p>
+                </div>
+                <div className={styles.item}>
+                    <div className={styles.item_img}>
+                        <img src="img/js.png" />
+                    </div>
+                    <p className={styles.item_ttl}>
+                        JavaScript
+                    </p>
+                    <p className={styles.item_desc}>
+                        jQueyをはじめ、React,Nextなどのライブラリやフレームワークが使用できます。リッチなウェブサイトには必須のUIやアニメーションを実装します。
+                    </p>
+                </div>
             </div>
-        </section>
+        </div>
+      </section>
       </>
     
   );

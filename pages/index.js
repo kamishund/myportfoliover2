@@ -6,7 +6,6 @@ import styles from "../styles/Home.module.scss"
 import Title from '../components/parts/Title'
 import Card from '../components/parts/Card'
 import Link from "next/link";
-import ContactButton from '../components/parts/ContactButton'
 import { client } from '../lib/works'
 
 
@@ -26,11 +25,6 @@ export default function Home({works}) {
        <div className='wrapper'>
           <div className={styles.work_ttl}>
               <Title ttl="Works" sub="実績"/>
-              <div className={styles.spd}>
-                <Button link='/works'>
-                  More
-                </Button>
-              </div>
           </div>
 
           <div className={styles.flex}>
@@ -73,12 +67,36 @@ export default function Home({works}) {
      </section>
 
 
-      <section className={styles.contact_section}>
-        <h2>お気軽にお問い合わせください</h2>
-        <ContactButton>
-          Contact
-        </ContactButton>
-       </section>
+     <section className={styles.about_page}>
+        <div className="wrapper">
+            <div className={styles.profile}>
+                <Title ttl="Profile" sub="自己紹介" />
+                <div className={styles.flex}>
+                    <div className={styles.imgarea}>
+                        <img src="/img/profile.jpg" alt="しゅんでぃーの写真"/>
+                    </div>
+
+                    <div className={styles.textarea}>
+                        <h2>しゅんでぃー</h2>
+                        <p className={styles.desc}>
+                            高専卒。Webサイト制作のフロントエンド・コーディング受託制作と請負制作専門にしている兼業フリーランスです。
+                            実務では大手アパレルブランドのECサイト内のコーディング業務・管理運用業務を行っています。
+                            得意領域はフロントエンドでHTML/CSS/Javascriptだけでなく、ReactやNextなどのモダンフロントエンド技術もキャッチアップしています。
+                        </p>
+                        <div className={styles.sns}>
+                            <Link href="https://github.com/kamishund">
+                                <a className={styles.ln}>github</a>
+                            </Link>
+
+                            <Link href="https://twitter.com/shund_webcr">
+                                <a className={styles.ln}>Twitter</a>
+                            </Link>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </section>
 
    </Layout>
   )

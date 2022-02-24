@@ -7,13 +7,13 @@ export default function Mainvisual() {
   return (
       <>
         <div className={styles.main}>
-            <div className={styles.textarea}>
-                <p>東京の現役コーダーによるWEB制作</p>
-                <h1><span>No</span> Tech <span>No</span> Life</h1>
-            </div>
-            <div className={styles.imgarea}> 
-               <img src='img/main1.jpg' />
-            </div>
+           <h1>
+             <span>Freelance</span>
+             <span>Web Developer</span>
+             <span>Front-end Engineer</span>
+           </h1>
+
+           <a href="mailto:kamishund@gmail.com" className={styles.contactbtn}>CONTACT</a>
         </div>
       </>
     

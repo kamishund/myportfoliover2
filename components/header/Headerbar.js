@@ -13,18 +13,12 @@ export default function Headerbar() {
     <header className={styles.header}>
         <h1>
             <Link href="/">
-                <a>ShunD Tech</a>
+                <a>ShunD</a>
             </Link>
         </h1>
         <div className={`${styles.colc} ${openMenu ? styles.open : undefined}`}>
             <nav>
                 <ul>
-                    <li>
-                        <Link href="/about">
-                            <a>About</a>
-                        </Link>
-                    </li>
-
                     <li>
                         <Link href="/works">
                             <a>Works</a>
@@ -32,13 +26,13 @@ export default function Headerbar() {
                     </li>
 
                     <li>
-                        <Link href="/service">
-                            <a>Service</a>
+                        <Link href="/price">
+                            <a>Price</a>
                         </Link>
                     </li>
 
                     <li>
-                        <Link href="/contact">
+                        <Link href="mailto:kamishund@gmail.com">
                             <a>Contact</a>
                         </Link>
                     </li>
@@ -55,25 +49,19 @@ export default function Headerbar() {
     <div className={`${styles.drawerMenu} ${openMenu ? styles.open : undefined}`}>
         <ul>
             <li onClick={() => setOpenMenu(false)}>
-                <Link href="/about">
-                    <a>About<br /><span>私について</span></a>
-                </Link>
-            </li>
-
-            <li onClick={() => setOpenMenu(false)}>
                 <Link href="/works">
                     <a>Works<br /><span>実績</span></a>
                 </Link>
             </li>
 
             <li onClick={() => setOpenMenu(false)}>
-                <Link href="/service">
-                    <a>Service<br /><span>サービス</span></a>
+                <Link href="/price">
+                    <a>Price<br /><span>料金表</span></a>
                 </Link>
             </li>
 
             <li onClick={() => setOpenMenu(false)}>
-                <Link href="/contact">
+                <Link href="mailto:kamishund@gmail.com">
                     <a>Contact<br /><span>お問い合わせ</span></a>
                 </Link>
             </li>

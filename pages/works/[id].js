@@ -1,5 +1,5 @@
 import Layout from '../../components/Layout'
-import { client, getAllWorksIds, getWorksData } from '../../lib/works';
+import { client } from '../../lib/works';
 import { useRouter } from "next/router"
 import styles from "../../styles/WorksDetail.module.scss"
 import { useEffect } from 'react';
