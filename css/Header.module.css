@@ -151,6 +151,8 @@
   text-align: left;
   margin-bottom: 40px;
   overflow: hidden;
+  -webkit-box-shadow: 0 10px 25px 0 rgba(60, 194, 235, 0.5);
+          box-shadow: 0 10px 25px 0 rgba(60, 194, 235, 0.5);
 }
 
 .drawerMenu li a {
