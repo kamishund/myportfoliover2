@@ -36,14 +36,17 @@ table {
   width: 100%;
   margin-top: 40px;
   min-width: 600px;
-  
+  box-shadow: 0 10px 25px 0 rgba(60, 194, 235, 0.5);
 }
 
 table th,
 table td {
   padding: 2em 1em;
-  border-bottom: 1px solid #9ca1ad;
-  
+  border: 1px solid #9ca1ad;
+
+  text-shadow: rgba(60, 194, 235, 0.6) 1px 0 10px;
+  color: #fff;
+  letter-spacing: 0.05em;
 }
 table thead th {
     font-size: .85em;
@@ -64,7 +67,7 @@ table tbody th {
 }
 .txt{
    text-align: left;
-   font-size: .75em;
+   font-size: .8em;
 }
 .price{
   text-align: right;
