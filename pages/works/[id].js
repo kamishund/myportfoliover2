@@ -20,7 +20,7 @@ export default function WorksDetail({works}) {
   }
 
   return (
-   <Layout title={works?.title}>
+   <Layout title={works?.title} noindex={true}>
      <section>
       <div className={styles.bg}>
         <div className={styles.ttlwrap}>
