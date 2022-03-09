@@ -73,7 +73,7 @@ export default function Home({works}) {
                 <Title ttl="Profile" sub="自己紹介" />
                 <div className={styles.flex}>
                     <div className={styles.imgarea}>
-                        <img src="/img/profile.jpg" alt="しゅんでぃーの写真"/>
+                        <img src="/img/zibun.JPG" alt="しゅんでぃーの写真"/>
                     </div>
 
                     <div className={styles.textarea}>
