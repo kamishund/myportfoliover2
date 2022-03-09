@@ -1,13 +1,13 @@
 import Layout from '../../components/Layout'
-import Button from '../../components/parts/Button'
-import { client, getAllWorks } from '../../lib/works'
 import styles from "../../styles/Work.module.scss"
 import Title from '../../components/parts/Title'
 import Card from '../../components/parts/Card'
-import Link from "next/link";
 
 
-export default function Works({works}) {
+import { Pagination } from '../../components/Pagination';
+
+
+export default function Works({works,totalCount }) {
   // console.log(works)
 
   if (!works) {
@@ -37,6 +37,8 @@ export default function Works({works}) {
               }
           </div>
 
+          <Pagination totalCount={totalCount} />
+
        
        </div>
      </section>
@@ -46,13 +48,30 @@ export default function Works({works}) {
 }
 
 
-export async function getStaticProps() {
-  const data = await client.get({ endpoint: "works" });
+// export async function getStaticProps() {
+//   const data = await client.get({ endpoint: "works" });
+
+//   return {
+//     props: {
+//       works: data.contents,
+//     },
+//     revalidate: 3,
+//   };
+// }
+
+export const getStaticProps = async () => {
+  const key = {
+    headers: {'X-MICROCMS-API-KEY': process.env.NEXT_PUBLIC_API_KEY},
+  };
+  const data = await fetch('https://kamishund.microcms.io/api/v1/works?offset=0&limit=12', key)
+    .then(res => res.json())
+    .catch(() => null);
 
   return {
     props: {
       works: data.contents,
+      totalCount: data.totalCount
     },
     revalidate: 3,
   };
-}
+};

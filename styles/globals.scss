@@ -78,3 +78,16 @@ table tbody th {
   overflow-x: scroll;
   margin: auto;
 }
+
+// pagenation
+.pagenation{
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  li{
+    font-size: 24px;
+    text-decoration: underline;
+  }
+}
